@@ -1,0 +1,183 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   height: 1000px;
+   display: grid;
+   /*--Si le quito algo de lo anterior no se ve--*/
+   grid-template-rows: repeat(2, 200px) 100px 1fr;
+   /*-- Se gún la imagen, los dos primeros espacios (rosado y verde) son del mismo porte, el tercero (azul) es app del porte de la mitad de los anteriores y el último (gris) es app 3 veces el tercero. Pensando en una pantalla de 800 px de alto (ej: Galaxy S20 android 11) serían 200 px 200 px 100 px  300 px. Para que se adapte a cualquier pantalla el último lo dejo adaptable y con un máximo de altura 1000px--*/
+}
+
+.rosado {
+   background-color: pink;
+   grid-row-start: 1;
+   grid-row-end: 2;
+
+}
+
+.verde {
+   background-color: green;
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+
+.azul {
+   background-color: blue;
+   grid-row-start: 3;
+   grid-row-end: 4;
+}
+
+.gris {
+   background-color: grey;
+   grid-row-start: 4;
+   grid-row-end: 5;
+}
+
+@media(min-width:500px) and (max-width:750px) {
+   body {
+      height: 1080px;
+      display: grid;
+      /*--Si le quito algo de lo anterior no se ve--*/
+      grid-template-rows: repeat(4, 0.25fr);
+      /*-- Se gún la imagen, los dos primeros espacios (rosado y verde) son del mismo porte, el tercero es app del porte de la mitad de los anteriores y el último es del doble del tamaño de los últimos, lo puedo dividir en 4 filas de 0.25fr.-*/
+      grid-template-columns: repeat(15, 0.07fr);
+      /*-- Para las columnas, me parece que el espacio extra del gris es 1/5 del azul, por lo que separaré en 15 columnas, la fila de en medio tendrá 5 columnas cada espacio y los de abajo 9 y 6, respectivamente. Cada columna tiene tamaño de 0.07fr.--*/
+
+   }
+
+   .rosado {
+      background-color: pink;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 16;
+
+   }
+
+   .verde {
+      background-color: green;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 6;
+      /*-- Acá hay margenes --*/
+      margin-right: 5px;
+      margin-left: 10px;
+   }
+
+   .azul {
+      background-color: blue;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 6;
+      grid-column-end: 11;
+      /*-- Acá hay margenes --*/
+      margin-right: 5px;
+      margin-left: 5px;
+   }
+
+   .rojo {
+      background-color: red;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 11;
+      grid-column-end: 16;
+      /*-- Acá hay margenes --*/
+      margin-right: 10px;
+      margin-left: 5px;
+
+   }
+
+   .gris {
+      background-color: grey;
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 1;
+      grid-column-end: 10;
+
+      /*--Los bordes--*/
+
+      margin-right: 10px;
+      margin-top: 10px;
+   }
+
+   .morado {
+      background-color: purple;
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 10;
+      grid-column-end: 16;
+      /*--Los bordes--*/
+      margin-top: 10px;
+
+   }
+}
+
+@media(min-width:751px) {
+   body {
+      height: 1280px;
+      /*--Estándar HD--*/
+      display: grid;
+      /*--Si le quito algo de lo anterior no se ve--*/
+      grid-template-rows: repeat(20, 0.05fr);
+      /*--Pondré que la línea rosa es una unidad, y la verde tiene 5 líneas rosa, la azul 8, la última 6. lo que me da un total de 20 líneas con 0.05fr c/u--*/
+      grid-template-columns: repeat(3, 0.33333333fr);
+      /*-- Para las columnas, al final las divido en 3 columnas de 0.33fr c/u.--*/
+
+   }
+
+   .rosado {
+      background-color: pink;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 4;
+
+   }
+
+   .verde {
+      background-color: green;
+      grid-row-start: 2;
+      grid-row-end: 7;
+      grid-column-start: 1;
+      grid-column-end: 4;
+   }
+
+   .azul {
+      background-color: blue;
+      grid-row-start: 7;
+      grid-row-end: 15;
+      grid-column-start: 1;
+      grid-column-end: 4;
+   }
+
+   .rojo {
+      background-color: red;
+      grid-row-start: 15;
+      grid-row-end: 21;
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+   }
+
+   .gris {
+      background-color: grey;
+      grid-row-start: 15;
+      grid-row-end: 21;
+      grid-column-start: 2;
+      grid-column-end: 3;
+   }
+
+   .morado {
+      background-color: purple;
+      grid-row-start: 15;
+      grid-row-end: 21;
+      grid-column-start: 3;
+      grid-column-end: 4;
+
+   }
+}

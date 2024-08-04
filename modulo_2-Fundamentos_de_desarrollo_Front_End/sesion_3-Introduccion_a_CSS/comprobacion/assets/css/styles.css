@@ -1,0 +1,75 @@
+/* Aplicando CSS de forma Externa
+    Selectores: 
+        Universal : 
+        Etiquetas  (h1 h2 p ul ol )  
+        Clase ( .nombreClase ) 
+        ID    ( #nombre Identificador único )
+        {propiedad : valor;}  
+*/
+table{
+    margin: 0 auto;
+}
+#ROJO{
+    color: black;
+    background-color: red;
+}
+
+#CAFE{
+    color: black;
+    background-color: brown;
+}
+
+#NARANJO{
+    color: black;
+    background-color: orange;
+}
+
+#BLANCO{
+    color: black;
+    background-color: white;
+}
+
+#AZUL{
+    color: black;
+    background-color: blue;
+}
+
+#ROSADO{
+    color: black;
+    background-color: pink;
+}
+
+#PURPURA{
+    color: black;
+    background-color: purple;
+}
+
+#VERDE{
+    color: black;
+    background-color: green;
+}
+
+#VIOLETA{
+    color: black;
+    background-color: violet;
+}
+
+#AMARILLO{
+    color: black;
+    background-color: yellow;
+}
+
+#GRIS{
+    color: black;
+    background-color: gray;
+}
+
+#TURQUESA{
+    color: black;
+    background-color: turquoise;
+}
+
+#NEGRO{
+    color: white;
+    background-color: black;
+}

@@ -1,0 +1,45 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+
+body{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+
+    background-color: #051B54;
+}
+.navbar-brand{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nav-link{
+    color: white;
+
+}
+
+.iniciosesion{
+    color: white;
+    background-color: #FFFFFF33;
+    border-radius: 20px;
+}
+
+.promocional{
+background-color: #62DAD3;
+height: 300px;
+
+}
+
+img{
+    height: 100%; /*--Que las imagen ocupen todo su espacio en su cajita img--*/
+}
+
+form{
+    color: #051B54;
+}
+button{
+    color: #051B54;
+}
